@@ -1,7 +1,7 @@
 module.exports = {
   moduleFileExtensions: ["js", "ts", "vue", "json"],
   transform: {
-    "^.+\\.(js|jsx)$": "babel-jest-amcharts",
+    "^.+\\.(js|jsx)$": "babel-jest",
     "^.+\\.ts$": "ts-jest",
     ".*\\.vue$": "vue-jest",
     ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$":
@@ -13,6 +13,6 @@ module.exports = {
     "!<rootDir>/src/**.stories.{ts.js}",
     "!<rootDir>/node_modules/",
   ],
-  transformIgnorePatterns: ["node_modules/(?!(@amcharts/amcharts4))"],
+  // transformIgnorePatterns: [],
   coverageReporters: ["text-summary"],
 };

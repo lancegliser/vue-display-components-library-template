@@ -5,13 +5,12 @@ import vue from "rollup-plugin-vue";
 import image from "@rollup/plugin-image";
 import pkg from "./package.json";
 
+// Grab what's easily idenfified as external from the package names
 const dependencies = Object.keys(pkg.dependencies || {});
 const peerDependencies = Object.keys(pkg.peerDependencies || {});
+// Create your additions into the mix in an array
 const external = [
   "vue",
-  "@amcharts/amcharts4/core",
-  "@amcharts/amcharts4/charts",
-  "@amcharts/amcharts4/themes/dark",
   ...dependencies,
   ...peerDependencies,
 ];
@@ -27,10 +26,11 @@ export default {
     },
   ],
   plugins: [
-    copy({
-      targets: [{ src: "src/**/*.scss", dest: "dist" }],
-      flatten: false,
-    }),
+    // A pattern if you keep scss files to push over to dist
+    // copy({
+    //   targets: [{ src: "src/**/*.scss", dest: "dist" }],
+    //   flatten: false,
+    // }),
     image(),
     typescript({
       rollupCommonJSResolveHack: true,
