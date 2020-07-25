@@ -1,0 +1,79 @@
+{
+  "name": "@my-organization/vue-display-components",
+  "version": "0.1.0",
+  "description": "Provides display components for Vue JS applications",
+  "homepage": "",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "web-types": "dist/web-types.json",
+  "vetur": {
+    "tags": "dist/vetur-tags.json",
+    "attributes": "dist/vetur-attributes.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --collect-coverage",
+    "build": "rimraf dist/* && rollup -c && npm run-script build:web-types",
+    "build:web-types": "node -r esm build/create-web-types.js",
+    "storybook": "start-storybook -p 6006",
+    "prepare": "npm t && npm run-script build",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "..."
+  },
+  "author": "Lance Gliser",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@rollup/plugin-image": "^2.0.5",
+    "@storybook/addon-a11y": "^5.3.19",
+    "@storybook/addon-actions": "^6.0.0-beta.14",
+    "@storybook/addon-links": "^6.0.0-beta.14",
+    "@storybook/addons": "^6.0.0-beta.14",
+    "@storybook/theming": "^5.3.19",
+    "@storybook/vue": "^6.0.0-beta.14",
+    "@types/jest": "^24.0.24",
+    "@vue/composition-api": "^0.5.0",
+    "@vue/test-utils": "^1.0.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "jest": "^25.1.0",
+    "jest-transform-stub": "^2.0.0",
+    "prettier": "^2.0.5",
+    "require-context": "^1.1.0",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.13",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-vue": "^5.1.9",
+    "sass-loader": "^8.0.2",
+    "storybook": "^6.0.0-beta.14",
+    "storybook-vue-router": "^1.0.7",
+    "ts-jest": "^25.2.1",
+    "ts-loader": "^6.2.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.3",
+    "vue": "^2.6.11",
+    "vue-jest": "^3.0.5",
+    "vue-loader": "^15.9.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "peerDependencies": {
+    "@vue/composition-api": "^0.5.0",
+    "vue": "^2.6.11"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.15.0",
+    "vue-router": "^3.3.4"
+  }
+}

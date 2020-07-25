@@ -1,0 +1,23 @@
+{
+  "name": "@my-organization/placeholder",
+  "version": "1.0.0",
+  "meta": {
+    "title": "Placeholder",
+    "description": "",
+    "components": [
+      {
+        "component": "Shimmer",
+        "slots": [
+          {
+            "name": "default",
+            "description": "Optional. Card contents of the main text."
+          },
+          {
+            "name": "header-image",
+            "description": "Optional. Header image."
+          }
+        ]
+      }
+    ]
+  }
+}
